@@ -1,0 +1,21 @@
+server:
+  port: 4001
+
+spring:
+  application:
+    name: pig-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/BigDuck/spring-cloud-config.git
+    bus:
+      trace:
+        enabled: true
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://pig:gip6666@localhost:1001/eureka
