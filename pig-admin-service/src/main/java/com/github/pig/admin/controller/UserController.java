@@ -92,7 +92,7 @@ public class UserController extends BaseController {
      */
     @DeleteMapping("/{id}")
     public Boolean userDel(@PathVariable Integer id) {
-        boolean delUserRole = sysUserRoleService.deleteByUserId(id);
+      /*  boolean delUserRole = sysUserRoleService.deleteByUserId(id);
         if (delUserRole) {
             boolean delUserInfo = userService.deleteById(id);
             if (delUserInfo) {
@@ -103,7 +103,9 @@ public class UserController extends BaseController {
             }
         }else {
             return Boolean.FALSE;
-        }
+        }*/
+        userService.deleteUserById(id);
+        return true;
     }
 
     /**

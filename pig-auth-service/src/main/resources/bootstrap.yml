@@ -16,7 +16,14 @@ spring:
         enabled: true
       profile: local
       label: master
-server:
-  port: 9090
-
+security:
+  oauth2:
+    client:
+      client-secret: pig:pig
+  basic:
+    enabled: false
+pig:
+    auth:
+      clientId : pig
+      clientSecret: pig
 

@@ -33,4 +33,11 @@ public interface UserService extends IService<SysUser> {
      * @param userName 用户名
      */
     void clearCache(String userName);
+
+    /**
+     * 根据id删除用户
+     * @param id
+     * @author：wupj 2017/12/24 23:18
+     */
+    void  deleteUserById(Integer id);
 }

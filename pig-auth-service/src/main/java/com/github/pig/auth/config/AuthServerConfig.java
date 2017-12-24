@@ -10,8 +10,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ConfigurationProperties(prefix = "pig.auth")
 public class AuthServerConfig {
-    private String clientId;
-    private String clientSecret;
+    private String clientId="pig";
+    private String clientSecret="pig";
     private String scope;
 
     public String getClientId() {

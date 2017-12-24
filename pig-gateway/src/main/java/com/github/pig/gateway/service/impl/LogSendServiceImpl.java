@@ -49,7 +49,8 @@ public class LogSendServiceImpl implements LogSendService {
             logVo.setToken(request.getHeader(CommonConstant.REQ_HEADER));
         }
         try {
-            rabbitTemplate.convertAndSend(CommonConstant.LOG_QUEUE, logVo);
+            logger.error(logVo.toString());
+           // rabbitTemplate.convertAndSend(CommonConstant.LOG_QUEUE, logVo);
         }catch (Exception e) {
             logger.error("MQ发送日志异常，异常信息："+e.getMessage());
         }
