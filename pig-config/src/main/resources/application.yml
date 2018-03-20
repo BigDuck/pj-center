@@ -12,10 +12,10 @@ spring:
     bus:
       trace:
         enabled: true
-
+## 因为eureka 使用了密码保护所以defaultZone必须加上用户名和密码
 eureka:
   instance:
     prefer-ip-address: true
   client:
     serviceUrl:
-      defaultZone: http://pig:gip6666@localhost:1001/eureka
+      defaultZone: http://wupj:757671834@localhost:1001/eureka
